@@ -62,12 +62,12 @@
     data.houseIndex += 1;
   });
 
-  controlsView.panelBody.on("change click", function(e){
+  controlsView.panelBody.on("input click", function(e){
     var elem = $(e.target),
         currentControls = elem.parents(".houseControls"),
         currentHouse = data.houses[controlsView.getControls().index(currentControls)];
 
-    if (e.type == "change") {
+    if (e.type == "input") {
       var floorsNumber = currentControls.find('input[type="number"]'),
           floorsRange = currentControls.find('input[type="range"]');
 
